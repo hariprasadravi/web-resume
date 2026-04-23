@@ -1,0 +1,165 @@
+:root {
+    --primary-color: #003366; /* Classic Navy Blue */
+    --text-color: #333;
+    --light-text: #666;
+    --bg-color: #fff;
+    --section-bg: #f9f9f9;
+    --border-color: #ddd;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-color);
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.contact-info, .social-links {
+    font-size: 0.9em;
+    color: var(--light-text);
+}
+
+.contact-info span, .social-links a {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+h2 i {
+    margin-right: 10px;
+}
+
+.job, .edu-item {
+    margin-bottom: 20px;
+}
+
+.job-header, .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #222;
+}
+
+.date {
+    font-weight: bold;
+    color: var(--light-text);
+    font-size: 0.9em;
+}
+
+.company {
+    font-style: italic;
+    color: var(--light-text);
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.projects h4 {
+    font-size: 1em;
+    margin: 10px 0 5px 0;
+    color: #444;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-category h3 {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .job-header, .edu-header {
+        flex-direction: column;
+    }
+    
+    .date {
+        margin-top: 5px;
+    }
+}
+
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 0;
+    }
+    .social-links {
+        display: none;
+    }
+}
