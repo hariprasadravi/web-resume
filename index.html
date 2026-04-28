@@ -3,149 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hariprasad Ravishankar - Web Resume</title>
+    <title>Hariprasad Ravishankar</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="main-wrapper">
         <header>
-            <h1>HARIPRASAD RAVISHANKAR</h1>
-            <p class="contact-info">
-                <span><i class="fas fa-envelope"></i> hariprasad.ravi@gmail.com</span>
-                <span><i class="fas fa-map-marker-alt"></i> Greater Boston, MA 02458</span>
-                <span><i class="fas fa-phone"></i> (213) 268-3102</span>
-            </p>
-            <p class="social-links">
-                <a href="https://github.com/hariprasadravi" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://linkedin.com/in/hariprasadravi" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <h1>Hariprasad Ravishankar</h1>
+            <p class="bio">I build deep learning compilers and lead high-performing software engineering teams at MathWorks.</p>
+            <p class="links">
+                <a href="mailto:hariprasad.ravi@gmail.com">Email</a> /
+                <a href="https://github.com/hariprasadravi" target="_blank">GitHub</a> /
+                <a href="https://linkedin.com/in/hariprasadravi" target="_blank">LinkedIn</a>
             </p>
         </header>
 
-        <section id="experience">
-            <h2><i class="fas fa-briefcase"></i> WORK EXPERIENCE</h2>
-            
-            <div class="job">
-                <div class="job-header">
-                    <h3>Senior Software Engineer and Senior Team Lead – Deep Learning Compilers</h3>
-                    <span class="date">Mar '19 – Present</span>
-                </div>
-                <p class="company">MathWorks, Inc., Natick MA</p>
-                <ul>
-                    <li>Lead a team of 3 high-performing software engineers, managing technical execution, mentoring, and professional development.</li>
-                    <li>Define and drive the product roadmap for deep learning compiler technologies, aligning development with strategic business goals.</li>
-                    <li>Spearhead compiler optimizations leveraging MLIR and CGIR (MathWorks internal IR), implementing advanced techniques such as operator fusions and AI training.</li>
-                    <li>Architect and implement highly optimized C/C++ and CUDA code generation from PyTorch, TFLite, and MATLAB's Deep Learning Toolbox.</li>
-                    <li>Deliver technical presentations and demonstrations to stakeholders and customers, showcasing new tools and capabilities.</li>
-                    <li>Develop and optimize efficient deep learning algorithms utilizing CUDA, cuBLAS, cuDNN, and TensorRT to maximize inference performance on edge and GPU targets.</li>
-                </ul>
-                <div class="projects">
-                    <h4>Key Projects:</h4>
-                    <ul>
-                        <li><strong>MATLAB Coder Support Package for PyTorch and LiteRT Models (R2026a):</strong> Led the development and successful launch of this package, enabling seamless code generation workflows across MATLAB Coder, GPU Coder, Simulink, and Simulink Coder.</li>
-                        <li>Code generation support for SSD object detection using cuDNN and TensorRT library.</li>
-                        <li>Compiler optimizations to fuse convolution, scaling, zero-padding layers.</li>
-                        <li>Code generation support for RNN, multi-input, multi-output networks, GANs, attention models, etc.</li>
-                    </ul>
-                </div>
+        <section id="initiatives">
+            <h2>Major Initiatives</h2>
+            <div class="item">
+                <span class="title">Compiler Optimization Framework (MLIR/CGIR)</span>
+                <p>Architected and led the implementation of a unified IR transformation layer, enabling complex operator fusions and hardware-specific optimizations that improved inference latency by up to 30%.</p>
             </div>
+            <div class="item">
+                <span class="title">Deep Learning Interoperability (PyTorch/LiteRT)</span>
+                <p>Spearheaded the development of the R2026a support package, providing a seamless bridge between modern AI frameworks and MathWorks’ production-grade code generation pipelines.</p>
+            </div>
+            <div class="item">
+                <span class="title">High-Performance Library Integration</span>
+                <p>Engineered deep integrations for TensorRT and cuDNN, enabling high-performance deployment of complex architectures like GANs and Transformers on edge devices.</p>
+            </div>
+            <div class="item">
+                <span class="title">AI Training & Low-Bit Quantization</span>
+                <p>Developed advanced strategies for AI training and quantization-aware optimizations, significantly reducing the memory footprint of large-scale models without sacrificing accuracy.</p>
+            </div>
+        </section>
 
-            <div class="job">
-                <div class="job-header">
-                    <h3>Software Engineer in Test</h3>
-                    <span class="date">May '18 – Mar '19</span>
+        <section id="work">
+            <h2>Work Experience</h2>
+            <div class="item">
+                <div class="header-row">
+                    <span class="bold">MathWorks</span>, Senior Team Lead & Senior Software Engineer
+                    <span class="date">2019 - Present</span>
                 </div>
-                <p class="company">MathWorks, Inc., Natick MA</p>
                 <ul>
-                    <li>Responsible for enhancing testability, developing test suites and conducting hands-on testing for GPU code-generation and deep learning deployment capabilities.</li>
-                    <li>Testing deployment of Deep Learning networks to Embedded targets like GPUs, FPGAs & ARM.</li>
-                    <li>Testing our code-generation engine from MATLAB & Simulink, code-generation optimizations as well as interfacing the generated code with hardware targets.</li>
+                    <li>Lead a team of 3 high-performing software engineers managing technical execution and professional development.</li>
+                    <li>Define product roadmap for deep learning compiler technologies.</li>
+                    <li>Architect C/C++/CUDA code generation from PyTorch, TFLite, and MATLAB.</li>
+                    <li>Optimize deep learning algorithms using CUDA, cuBLAS, cuDNN, and TensorRT.</li>
                 </ul>
             </div>
-
-            <div class="job">
-                <div class="job-header">
-                    <h3>Application Support Engineer</h3>
-                    <span class="date">May '17 – Apr '18</span>
+            <div class="item">
+                <div class="header-row">
+                    <span class="bold">MathWorks</span>, Software Engineer in Test
+                    <span class="date">2018 - 2019</span>
                 </div>
-                <p class="company">MathWorks, Inc., Natick MA</p>
-                <ul>
-                    <li>Technical specialist in MATLAB and MATLAB products in Neural Networks, Image Processing, Deep Learning, Machine Learning and Optimization algorithms.</li>
-                    <li>Solved complex technical issues for users in academia and industry, often collaborating with development.</li>
-                    <li>Support development in identifying quality issues such as performance, enhancements etc. to improve and incorporate customer workflows.</li>
-                </ul>
+                <p>Enhanced testability and conducted testing for GPU code-generation and deployment to Embedded targets (GPUs, FPGAs, ARM).</p>
             </div>
-
-            <div class="job">
-                <div class="job-header">
-                    <h3>Deep Learning Co-op</h3>
-                    <span class="date">Jan '17 – May '17</span>
+            <div class="item">
+                <div class="header-row">
+                    <span class="bold">MathWorks</span>, Application Support Engineer
+                    <span class="date">2017 - 2018</span>
                 </div>
-                <p class="company">NinePoint Medical, Inc., Bedford, MA</p>
-                <ul>
-                    <li>Developed Deep Learning Architecture for efficient segmentation of clinical features in OCT images using Tensorflow.</li>
-                    <li>Designed custom networks based on well-known architectures such as U-Net, Fully Convolutional Net for image segmentation.</li>
-                    <li>Developed verification scripts and post processing algorithms for offline deployment.</li>
-                    <li>The feature was successfully pushed into production with FDA clearance.</li>
-                </ul>
+                <p>Technical specialist for Neural Networks and Optimization algorithms; solved complex customer technical issues.</p>
+            </div>
+            <div class="item">
+                <div class="header-row">
+                    <span class="bold">NinePoint Medical</span>, Deep Learning Co-op
+                    <span class="date">2017</span>
+                </div>
+                <p>Developed clinical feature segmentation for OCT images using TensorFlow; feature pushed to production with FDA clearance.</p>
             </div>
         </section>
 
         <section id="education">
-            <h2><i class="fas fa-graduation-cap"></i> EDUCATION</h2>
-            <div class="edu-item">
-                <div class="edu-header">
-                    <h3>University of Southern California</h3>
-                    <span class="date">Aug '15 – May '17</span>
-                </div>
-                <p>Masters in Electrical Engineering, <strong>GPA 3.86/4.0</strong></p>
+            <h2>Education</h2>
+            <div class="item-simple">
+                <span class="bold">University of Southern California</span>, MS in Electrical Engineering (GPA 3.86/4.0)
             </div>
-            <div class="edu-item">
-                <div class="edu-header">
-                    <h3>Vellore Institute of Technology</h3>
-                    <span class="date">Jul '11 – May '15</span>
-                </div>
-                <p>Bachelors in Electronics and Instrumentation Engineering, <strong>CGPA 9.13/10</strong></p>
+            <div class="item-simple">
+                <span class="bold">Vellore Institute of Technology</span>, B.Tech in Electronics (CGPA 9.13/10)
             </div>
         </section>
 
         <section id="skills">
-            <h2><i class="fas fa-tools"></i> SKILLS</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Expertise</h3>
-                    <p>C++, MATLAB, Simulink, CUDA, Python, PyTorch, TFLite, MLIR</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Libraries & Tools</h3>
-                    <p>TensorRT, cuDNN, cuBLAS, OpenCV, Linux, CGIR</p>
-                </div>
-                <div class="skill-category">
-                    <h3>Leadership</h3>
-                    <p>Team Management (3 engineers), Roadmap Planning, Technical Presentations</p>
-                </div>
-            </div>
+            <h2>Skills</h2>
+            <p>
+                <span class="bold">Expertise:</span> C++, MATLAB, Simulink, CUDA, Python, PyTorch, TFLite, MLIR, CGIR. <br>
+                <span class="bold">Libraries:</span> TensorRT, cuDNN, cuBLAS, OpenCV. <br>
+                <span class="bold">Leadership:</span> Team Management, Roadmap Planning, Technical Presentations.
+            </p>
         </section>
-
-        <section id="initiatives">
-            <h2><i class="fas fa-lightbulb"></i> SELECTED ENGINEERING INITIATIVES</h2>
-            <div class="initiative">
-                <h3>Compiler Optimization Framework (MLIR/CGIR)</h3>
-                <p>Architected and led the implementation of a unified intermediate representation (IR) transformation layer, enabling complex operator fusions and hardware-specific optimizations that improved inference latency by up to 30%.</p>
-            </div>
-            <div class="initiative">
-                <h3>Deep Learning Interoperability (PyTorch/LiteRT)</h3>
-                <p>Spearheaded the development of the R2026a support package, providing a seamless bridge between modern AI frameworks and MathWorks’ production-grade code generation pipelines.</p>
-            </div>
-            <div class="initiative">
-                <h3>High-Performance Library Integration</h3>
-                <p>Engineered deep integrations for TensorRT and cuDNN, enabling high-performance deployment of complex architectures like GANs and Transformers on edge devices.</p>
-            </div>
-            <div class="initiative">
-                <h3>AI Training & Low-Bit Quantization</h3>
-                <p>Developed advanced strategies for AI training and quantization-aware optimizations, significantly reducing the memory footprint of large-scale models without sacrificing accuracy.</p>
-            </div>
-        </section>
+        
+        <footer>
+            <p class="footer-note">Minimalist design inspired by Andrej Karpathy.</p>
+        </footer>
     </div>
 </body>
 </html>
