@@ -610,13 +610,20 @@ h2.section-title svg {
 
 /* Print Media Styles */
 @media print {
-    /* Hide interactive elements and buttons */
+    @page {
+        size: letter;
+        margin: 0.35in 0.4in;
+    }
+
+    /* Hide web-only interactive items */
     #themeToggle,
     #printBtn,
     .skills-filter-section,
     .contact-links,
     h2.section-title svg,
-    ::-webkit-scrollbar {
+    ::-webkit-scrollbar,
+    .timeline-badge,
+    .edu-badge {
         display: none !important;
     }
 
@@ -624,91 +631,109 @@ h2.section-title svg {
         background: #ffffff !important;
         color: #000000 !important;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
-        font-size: 10.5pt !important;
-        line-height: 1.45 !important;
+        font-size: 8.2pt !important;
+        line-height: 1.25 !important;
         padding: 0 !important;
         margin: 0 !important;
-        display: block !important;
+        width: 100% !important;
     }
 
     .app-container {
         display: block !important;
+        width: 100% !important;
         min-height: auto !important;
     }
 
+    /* Print Header (sidebar converted to top header) */
     aside {
         background: transparent !important;
         border-right: none !important;
-        border-bottom: 2px solid #334155 !important;
-        padding: 0 0 15px 0 !important;
+        border-bottom: 2px solid #1a0205 !important;
+        padding: 0 0 6px 0 !important;
         height: auto !important;
         position: static !important;
         display: block !important;
         overflow-y: visible !important;
-        margin-bottom: 25px !important;
+        margin-bottom: 10px !important;
+        text-align: center !important;
     }
 
     .profile-info {
-        gap: 8px !important;
+        align-items: center !important;
+        gap: 1px !important;
     }
 
     h1 {
-        font-size: 24pt !important;
+        font-size: 18pt !important;
         font-weight: 800 !important;
         background: none !important;
         -webkit-text-fill-color: initial !important;
-        color: #0f172a !important;
+        color: #0f0204 !important;
+        line-height: 1.1 !important;
+        margin-bottom: 2px !important;
     }
 
     .subtitle {
-        font-size: 12pt !important;
-        color: #334155 !important;
-        margin-bottom: 4px !important;
+        font-size: 9.5pt !important;
+        font-weight: bold !important;
+        color: #990000 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
     }
 
     .bio {
-        font-size: 9.5pt !important;
-        color: #475569 !important;
+        display: none !important; /* Hide bio paragraph in print to preserve 1-page fit */
     }
 
     .print-contact {
         display: flex !important;
-        flex-wrap: wrap !important;
+        flex-direction: row !important;
+        justify-content: center !important;
         gap: 15px !important;
-        font-size: 9pt !important;
-        color: #475569 !important;
-        margin-top: 8px !important;
-        font-family: monospace !important;
+        font-size: 8.2pt !important;
+        color: #334155 !important;
+        margin-top: 4px !important;
+        font-family: -apple-system, sans-serif !important;
     }
 
     main {
         padding: 0 !important;
         max-height: none !important;
         overflow-y: visible !important;
+        width: 100% !important;
     }
 
     section {
-        margin-bottom: 25px !important;
+        margin-bottom: 12px !important;
         opacity: 1 !important;
         transform: none !important;
         page-break-inside: avoid;
     }
 
     h2.section-title {
-        font-size: 13pt !important;
-        color: #0f172a !important;
-        border-bottom: 1px solid #cbd5e1 !important;
-        padding-bottom: 4px !important;
-        margin-bottom: 12px !important;
+        font-size: 10pt !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        color: #0f0204 !important;
+        border-bottom: 1.5px solid #1a0205 !important;
+        padding-bottom: 1px !important;
+        margin-bottom: 6px !important;
     }
 
-    /* Standardized Card print layout */
+    /* Initiatives Grid (Layout in 2 columns for print to save significant vertical space) */
+    .initiatives-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px 12px !important;
+    }
+
     .card {
         background: transparent !important;
         border: none !important;
         box-shadow: none !important;
         padding: 0 !important;
-        margin-bottom: 15px !important;
+        margin: 0 !important;
         backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
     }
@@ -718,10 +743,15 @@ h2.section-title svg {
     }
 
     .card-title {
-        font-size: 11pt !important;
+        font-size: 8.5pt !important;
         font-weight: 700 !important;
-        color: #0f172a !important;
-        margin-bottom: 2px !important;
+        color: #000000 !important;
+        margin-bottom: 1px !important;
+    }
+
+    .card-title a {
+        text-decoration: none !important;
+        color: #000000 !important;
     }
 
     .card-title a svg {
@@ -729,15 +759,16 @@ h2.section-title svg {
     }
 
     .card p {
-        font-size: 9.5pt !important;
-        color: #334155 !important;
+        font-size: 8pt !important;
+        color: #333333 !important;
+        line-height: 1.2 !important;
     }
 
     .card-tags {
-        display: none !important; /* Hide tags in print since we have the Skills Summary section */
+        display: none !important;
     }
 
-    /* Timeline print layout */
+    /* Timeline Experience (Convert to classic flat list resume blocks) */
     .timeline {
         padding-left: 0 !important;
     }
@@ -746,53 +777,65 @@ h2.section-title svg {
         display: none !important;
     }
 
-    .timeline-badge,
-    .edu-badge {
-        display: none !important;
-    }
-
     .timeline-item {
-        margin-bottom: 20px !important;
-        opacity: 1 !important;
+        margin-bottom: 8px !important;
         page-break-inside: avoid;
     }
 
+    .timeline-item:last-child {
+        margin-bottom: 0 !important;
+    }
+
     .timeline-header {
-        margin-bottom: 4px !important;
+        margin-bottom: 1px !important;
+        display: flex !important;
+        justify-content: space-between !important;
     }
 
     .role-title {
-        font-size: 11pt !important;
-        color: #0f172a !important;
+        font-size: 8.5pt !important;
+        color: #000000 !important;
+        font-weight: 700 !important;
     }
 
     .company-name {
-        color: #0f172a !important;
+        color: #000000 !important;
+        font-weight: 700 !important;
     }
 
     .timeline-date {
-        font-size: 8.5pt !important;
-        font-weight: bold !important;
+        font-size: 8.2pt !important;
+        font-weight: 700 !important;
         background: none !important;
         border: none !important;
         padding: 0 !important;
-        color: #475569 !important;
+        color: #333333 !important;
+    }
+
+    .timeline-content ul {
+        gap: 1px !important;
     }
 
     .timeline-content li {
-        font-size: 9.5pt !important;
-        color: #334155 !important;
-        padding-left: 12px !important;
+        font-size: 8pt !important;
+        color: #222222 !important;
+        padding-left: 10px !important;
+        line-height: 1.2 !important;
     }
 
     .timeline-content li::before {
         content: "•" !important;
-        color: #475569 !important;
+        left: 0 !important;
+        color: #000000 !important;
+        font-size: 8pt !important;
     }
 
-    /* Education print layout */
+    /* Education Items (Render inline to fit neatly) */
     .education-list {
-        gap: 10px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        gap: 15px !important;
     }
 
     .edu-item {
@@ -800,18 +843,48 @@ h2.section-title svg {
         border: none !important;
         box-shadow: none !important;
         padding: 0 !important;
+        display: flex !important;
         flex-direction: row !important;
-        justify-content: space-between !important;
         align-items: baseline !important;
+        gap: 6px !important;
+        width: auto !important;
+        flex-grow: 1 !important;
+        justify-content: space-between !important;
+    }
+
+    .edu-details {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 5px !important;
     }
 
     .edu-degree {
-        font-size: 11pt !important;
-        color: #0f172a !important;
+        font-size: 8.5pt !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
     }
 
     .edu-school {
-        font-size: 9.5pt !important;
-        color: #475569 !important;
+        font-size: 8.5pt !important;
+        color: #333333 !important;
+    }
+
+    .edu-school::before {
+        content: ", " !important;
+    }
+
+    /* Skills summary print styling */
+    #skills-section .card {
+        padding: 0 !important;
+    }
+
+    #skills-section div {
+        font-size: 8pt !important;
+        margin-bottom: 1px !important;
+        line-height: 1.2 !important;
+    }
+
+    #skills-section strong {
+        color: #000000 !important;
     }
 }
