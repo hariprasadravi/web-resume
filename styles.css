@@ -492,6 +492,37 @@ h2.section-title svg {
     font-weight: bold;
 }
 
+.project-header {
+    margin-top: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    list-style-type: none !important;
+}
+
+.project-header::before {
+    display: none !important; /* Hide the arrow indicator */
+}
+
+.project-list {
+    margin-top: 6px;
+    padding-left: 15px;
+    list-style-type: circle;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.project-list li {
+    font-size: 0.875rem !important;
+    position: relative;
+    padding-left: 0 !important;
+}
+
+.project-list li::before {
+    display: none !important; /* Hide the arrow for sub-bullets */
+}
+
 /* Education Layout */
 .education-list {
     display: flex;
@@ -886,5 +917,37 @@ h2.section-title svg {
 
     #skills-section strong {
         color: #000000 !important;
+    }
+
+    /* Print sub-bullets styling */
+    .project-header {
+        margin-top: 3px !important;
+        font-weight: bold !important;
+        font-size: 8pt !important;
+        color: #000000 !important;
+        list-style-type: none !important;
+        padding-left: 0 !important;
+    }
+
+    .project-header::before {
+        display: none !important;
+    }
+
+    .project-list {
+        margin-top: 2px !important;
+        padding-left: 10px !important;
+        gap: 1px !important;
+        list-style-type: circle !important;
+    }
+
+    .project-list li {
+        font-size: 7.8pt !important;
+        color: #333333 !important;
+        line-height: 1.15 !important;
+        padding-left: 0 !important;
+    }
+
+    .project-list li::before {
+        display: none !important;
     }
 }

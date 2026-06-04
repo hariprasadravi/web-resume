@@ -35,12 +35,12 @@
                         </svg>
                         <span id="themeToggleText">Theme</span>
                     </button>
-                    <button id="printBtn" class="theme-btn" aria-label="Print/Save PDF Resume">
-                        <svg viewBox="0 0 24 24">
+                    <a id="printBtn" href="Resume-HariprasadRavishankar.pdf" download="Resume-HariprasadRavishankar.pdf" class="theme-btn" aria-label="Download PDF Resume" style="text-decoration: none;">
+                        <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; fill: currentColor;">
                             <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/>
                         </svg>
-                        <span>Save PDF / Print</span>
-                    </button>
+                        <span>Download PDF</span>
+                    </a>
                 </div>
             </div>
 
@@ -188,11 +188,19 @@
                         </div>
                         <div class="timeline-content">
                             <ul>
-                                <li>Led a team of 3 high-performing software engineers managing technical execution, architectural guidelines, and professional development.</li>
+                                <li>Led a team of 3 high-performing software engineers managing technical execution, mentoring, and professional development.</li>
                                 <li>Defined and drove the product roadmap for deep learning compiler technologies, presenting strategy and progress to **Vice Presidents and executive leadership** bi-annually.</li>
                                 <li>Architected end-to-end C/C++/CUDA code generation from PyTorch, TFLite, and MATLAB frameworks.</li>
                                 <li>Drove the technical integration of deep learning code generation into **Simulink**, supporting the Predict, LiteRT, and PyTorch blocks with full compatibility for **Rapid Acceleration**, **Model Reference Acceleration**, and advanced cache handling.</li>
                                 <li>Optimized compiler-generated code for deep learning models using CUDA, cuBLAS, cuDNN, and TensorRT libraries.</li>
+                                <li class="project-header">Key Projects:
+                                    <ul class="project-list">
+                                        <li><strong>MATLAB Coder Support Package for PyTorch and LiteRT Models (R2026a):</strong> Led the development and successful launch of this package, enabling seamless code generation workflows across MATLAB Coder, GPU Coder, Simulink, and Simulink Coder.</li>
+                                        <li>Code generation support for SSD object detection using cuDNN and TensorRT library.</li>
+                                        <li>Compiler optimizations to fuse convolution, scaling, zero-padding layers.</li>
+                                        <li>Code generation support for RNN, multi-input, multi-output networks, GANs, attention models.</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -210,8 +218,16 @@
                         </div>
                         <div class="timeline-content">
                             <ul>
-                                <li>Enhanced testability and conducted automation testing for GPU code-generation pipelines.</li>
-                                <li>Validated production-level deployment of deep learning models to Embedded targets including GPUs, FPGAs, and ARM processors.</li>
+                                <li>Responsible for enhancing testability, developing test suites, and conducting hands-on testing for GPU code-generation and deep learning deployment capabilities.</li>
+                                <li>Tested deployment of Deep Learning networks to Embedded targets like GPUs, FPGAs, and ARM processors.</li>
+                                <li>Tested code-generation engine from MATLAB & Simulink, code-generation optimizations, and interfacing generated code with hardware targets.</li>
+                                <li class="project-header">Key Projects:
+                                    <ul class="project-list">
+                                        <li>Added code generation support for <code>crop2dLayer</code> and **Fully Convolutional Networks** for Semantic Segmentation (R2019a).</li>
+                                        <li>Designed and implemented layers to support code generation for **YOLO V2** for cuDNN and TensorRT (R2019a).</li>
+                                        <li>Added code generation support for **GoogleNet** and **Inception V3** for TensorRT target (R2019a).</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -229,7 +245,15 @@
                         </div>
                         <div class="timeline-content">
                             <ul>
-                                <li>Technical specialist for Neural Networks and Optimization algorithms, resolving complex deep learning bugs for key commercial and academic customers.</li>
+                                <li>Technical specialist in MATLAB and MATLAB products in Neural Networks, Image Processing, Deep Learning, Machine Learning, and Optimization algorithms.</li>
+                                <li>Solved complex technical issues for users in academia and industry, collaborating with development.</li>
+                                <li>Supported development in identifying quality issues, testing performance enhancements, and improving customer deep learning workflows.</li>
+                                <li class="project-header">Key Projects:
+                                    <ul class="project-list">
+                                        <li>Implemented MaxUnpooling Layer in C++-cuDNN and added support for **SegNet** within the GPU Coder Toolbox in MATLAB.</li>
+                                        <li>Added support for code generation for Denoising Networks such as **DnCNN** in the GPU Coder Toolbox.</li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -246,8 +270,30 @@
                         </div>
                         <div class="timeline-content">
                             <ul>
-                                <li>Developed medical feature segmentation models for high-resolution OCT images using TensorFlow and Python.</li>
-                                <li>Successfully shipped segmentation features to production culminating in official **FDA clearance**.</li>
+                                <li>Developed Deep Learning Architecture for efficient segmentation of clinical features in OCT images using TensorFlow.</li>
+                                <li>Designed custom networks based on well-known architectures such as U-Net and Fully Convolutional Net for image segmentation.</li>
+                                <li>Developed verification scripts and post-processing algorithms for offline deployment.</li>
+                                <li>Feature pushed to production with official **FDA clearance**.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Summer Research Intern -->
+                    <div class="timeline-item" data-skills="python pytorch">
+                        <svg class="timeline-badge" viewBox="0 0 32 32">
+                            <circle cx="16" cy="16" r="16" fill="#0056b3"/>
+                            <text x="16" y="21" font-family="'Outfit', sans-serif" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">PR</text>
+                        </svg>
+                        <div class="timeline-header">
+                            <span class="role-title"><span class="company-name">Philips Research</span>, Summer Research Intern</span>
+                            <span class="timeline-date">Jun 2016 - Jul 2016</span>
+                        </div>
+                        <div class="timeline-content">
+                            <ul>
+                                <li>Worked on a Deep Learning Approach for Nucleus Segmentation in Cervical Cancer Images.</li>
+                                <li>Implemented *Segmentation by Classification* and *Segmentation using Deconvolution* techniques using DIGITS by NVIDIA.</li>
+                                <li>Designed and trained an architecture based on AlexNet and a 2-stage Deconvolution network for segmentation.</li>
+                                <li>Detected and segmented unseen nuclei with a PPV of 91% and Jaccard Score of 95%, making it viable for commercial deployment.</li>
                             </ul>
                         </div>
                     </div>
@@ -418,11 +464,6 @@
                 });
             }
 
-            // Print / Save PDF Handler
-            const printBtn = document.getElementById('printBtn');
-            printBtn.addEventListener('click', () => {
-                window.print();
-            });
         });
     </script>
 </body>
