@@ -396,14 +396,14 @@ h2.section-title svg {
 /* Work Experience Timeline */
 .timeline {
     position: relative;
-    padding-left: 32px;
+    padding-left: 48px;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
     top: 5px;
-    left: 7px;
+    left: 15px;
     width: 2px;
     height: calc(100% - 15px);
     background: var(--timeline-line);
@@ -419,24 +419,22 @@ h2.section-title svg {
     margin-bottom: 0;
 }
 
-.timeline-dot {
-    content: '';
+.timeline-badge {
     position: absolute;
-    left: -32px;
-    top: 6px;
-    width: 16px;
-    height: 16px;
+    left: -48px;
+    top: 4px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background-color: var(--bg-color);
-    border: 3px solid var(--timeline-dot);
     z-index: 2;
-    transition: all 0.3s ease;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 0 4px var(--bg-color), var(--shadow);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.timeline-item:hover .timeline-dot {
-    background-color: var(--timeline-dot);
-    box-shadow: 0 0 10px var(--timeline-dot);
-    transform: scale(1.2);
+.timeline-item:hover .timeline-badge {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 15px var(--accent-glow);
 }
 
 .timeline-header {
@@ -507,8 +505,8 @@ h2.section-title svg {
     border-radius: 12px;
     padding: 20px 24px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 20px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
 }
@@ -516,6 +514,18 @@ h2.section-title svg {
 .edu-item:hover {
     border-color: var(--accent-secondary);
     transform: translateX(4px);
+}
+
+.edu-badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: var(--shadow);
+}
+
+.edu-details {
+    flex-grow: 1;
 }
 
 .edu-degree {
@@ -736,7 +746,8 @@ h2.section-title svg {
         display: none !important;
     }
 
-    .timeline-dot {
+    .timeline-badge,
+    .edu-badge {
         display: none !important;
     }
 
