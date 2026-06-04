@@ -133,6 +133,13 @@ h1 {
 /* Theme Toggle Button */
 .theme-toggle-container {
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.print-contact {
+    display: none;
 }
 
 .theme-btn {
@@ -588,5 +595,212 @@ h2.section-title svg {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+}
+
+/* Print Media Styles */
+@media print {
+    /* Hide interactive elements and buttons */
+    #themeToggle,
+    #printBtn,
+    .skills-filter-section,
+    .contact-links,
+    h2.section-title svg,
+    ::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+        font-size: 10.5pt !important;
+        line-height: 1.45 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    .app-container {
+        display: block !important;
+        min-height: auto !important;
+    }
+
+    aside {
+        background: transparent !important;
+        border-right: none !important;
+        border-bottom: 2px solid #334155 !important;
+        padding: 0 0 15px 0 !important;
+        height: auto !important;
+        position: static !important;
+        display: block !important;
+        overflow-y: visible !important;
+        margin-bottom: 25px !important;
+    }
+
+    .profile-info {
+        gap: 8px !important;
+    }
+
+    h1 {
+        font-size: 24pt !important;
+        font-weight: 800 !important;
+        background: none !important;
+        -webkit-text-fill-color: initial !important;
+        color: #0f172a !important;
+    }
+
+    .subtitle {
+        font-size: 12pt !important;
+        color: #334155 !important;
+        margin-bottom: 4px !important;
+    }
+
+    .bio {
+        font-size: 9.5pt !important;
+        color: #475569 !important;
+    }
+
+    .print-contact {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 15px !important;
+        font-size: 9pt !important;
+        color: #475569 !important;
+        margin-top: 8px !important;
+        font-family: monospace !important;
+    }
+
+    main {
+        padding: 0 !important;
+        max-height: none !important;
+        overflow-y: visible !important;
+    }
+
+    section {
+        margin-bottom: 25px !important;
+        opacity: 1 !important;
+        transform: none !important;
+        page-break-inside: avoid;
+    }
+
+    h2.section-title {
+        font-size: 13pt !important;
+        color: #0f172a !important;
+        border-bottom: 1px solid #cbd5e1 !important;
+        padding-bottom: 4px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Standardized Card print layout */
+    .card {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 15px !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    .card::before {
+        display: none !important;
+    }
+
+    .card-title {
+        font-size: 11pt !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+        margin-bottom: 2px !important;
+    }
+
+    .card-title a svg {
+        display: none !important;
+    }
+
+    .card p {
+        font-size: 9.5pt !important;
+        color: #334155 !important;
+    }
+
+    .card-tags {
+        display: none !important; /* Hide tags in print since we have the Skills Summary section */
+    }
+
+    /* Timeline print layout */
+    .timeline {
+        padding-left: 0 !important;
+    }
+
+    .timeline::before {
+        display: none !important;
+    }
+
+    .timeline-dot {
+        display: none !important;
+    }
+
+    .timeline-item {
+        margin-bottom: 20px !important;
+        opacity: 1 !important;
+        page-break-inside: avoid;
+    }
+
+    .timeline-header {
+        margin-bottom: 4px !important;
+    }
+
+    .role-title {
+        font-size: 11pt !important;
+        color: #0f172a !important;
+    }
+
+    .company-name {
+        color: #0f172a !important;
+    }
+
+    .timeline-date {
+        font-size: 8.5pt !important;
+        font-weight: bold !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        color: #475569 !important;
+    }
+
+    .timeline-content li {
+        font-size: 9.5pt !important;
+        color: #334155 !important;
+        padding-left: 12px !important;
+    }
+
+    .timeline-content li::before {
+        content: "•" !important;
+        color: #475569 !important;
+    }
+
+    /* Education print layout */
+    .education-list {
+        gap: 10px !important;
+    }
+
+    .edu-item {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: baseline !important;
+    }
+
+    .edu-degree {
+        font-size: 11pt !important;
+        color: #0f172a !important;
+    }
+
+    .edu-school {
+        font-size: 9.5pt !important;
+        color: #475569 !important;
     }
 }
