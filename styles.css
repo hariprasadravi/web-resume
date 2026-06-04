@@ -343,15 +343,15 @@ section:last-child {
 @media print {
     @page {
         size: letter;
-        margin: 0.25in 0.35in !important;
+        margin: 0.22in 0.32in !important;
     }
 
     body {
         background: #ffffff !important;
         color: #000000 !important;
         font-family: 'Inter', -apple-system, sans-serif !important;
-        font-size: 7.8pt !important; /* Slightly smaller base font for safety */
-        line-height: 1.22 !important;
+        font-size: 7.5pt !important; /* Compressed base font for single-page layout */
+        line-height: 1.2 !important;
         padding: 0 !important;
         margin: 0 !important;
         display: block !important;
@@ -359,7 +359,7 @@ section:last-child {
     }
 
     .control-bar {
-        display: none !important; /* Hide floating buttons */
+        display: none !important;
     }
 
     .resume-page {
@@ -371,11 +371,11 @@ section:last-child {
         max-width: none !important;
         min-height: auto !important;
         border-radius: 0 !important;
-        gap: 8px !important;
+        gap: 5px !important;
     }
 
     .resume-content-grid {
-        gap: 15px !important;
+        gap: 12px !important;
     }
 
     /* Print typography and element families */
@@ -396,21 +396,21 @@ section:last-child {
 
     .resume-header {
         border-bottom-color: #000000 !important;
-        padding-bottom: 8px !important;
+        padding-bottom: 4px !important;
     }
 
     .resume-header h1 {
         background: none !important;
         -webkit-text-fill-color: initial !important;
         color: #000000 !important;
-        font-size: 16pt !important;
+        font-size: 15pt !important;
     }
 
     .section-title {
         border-bottom-color: #000000 !important;
-        font-size: 9pt !important;
-        margin-bottom: 6px !important;
-        padding-bottom: 2px !important;
+        font-size: 8.5pt !important;
+        margin-bottom: 4px !important;
+        padding-bottom: 1px !important;
     }
 
     .section-title svg {
@@ -418,38 +418,38 @@ section:last-child {
     }
 
     section {
-        margin-bottom: 10px !important;
+        margin-bottom: 6px !important;
     }
 
     .timeline-item {
-        margin-bottom: 8px !important;
+        margin-bottom: 4px !important;
     }
 
     .timeline-header {
-        margin-bottom: 2px !important;
+        margin-bottom: 1px !important;
     }
 
     .role-title {
-        font-size: 8pt !important;
+        font-size: 7.8pt !important;
     }
 
     .timeline-date {
-        font-size: 7.5pt !important;
+        font-size: 7.2pt !important;
     }
 
     .timeline-content li {
-        font-size: 7.2pt !important;
-        line-height: 1.2 !important;
+        font-size: 6.9pt !important;
+        line-height: 1.15 !important;
         margin-bottom: 1px !important;
         padding-left: 10px !important;
     }
 
     .side-column {
-        gap: 12px !important;
+        gap: 8px !important;
     }
 
     .education-list {
-        gap: 6px !important;
+        gap: 4px !important;
     }
 
     .edu-item {
@@ -457,24 +457,24 @@ section:last-child {
     }
 
     .edu-degree {
-        font-size: 8pt !important;
+        font-size: 7.8pt !important;
     }
 
     .edu-school, .edu-date-gpa {
-        font-size: 7.2pt !important;
+        font-size: 6.9pt !important;
     }
 
     .skills-list {
-        gap: 4px !important;
+        gap: 3px !important;
     }
 
     .skills-list p {
-        font-size: 7.2pt !important;
-        line-height: 1.2 !important;
+        font-size: 6.9pt !important;
+        line-height: 1.15 !important;
     }
 
     .initiatives-list {
-        gap: 6px !important;
+        gap: 4px !important;
     }
 
     .initiative-item {
@@ -482,12 +482,12 @@ section:last-child {
     }
 
     .initiative-title {
-        font-size: 7.8pt !important;
+        font-size: 7.5pt !important;
     }
 
     .initiative-desc {
-        font-size: 6.8pt !important;
-        line-height: 1.2 !important;
+        font-size: 6.4pt !important;
+        line-height: 1.15 !important;
     }
 }
 
